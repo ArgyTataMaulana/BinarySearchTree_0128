@@ -46,5 +46,20 @@ class binaryTree
         int x;
         cout << "Maasukkan nilai: ";
         cin >> x;
+
+        // step 1.: Allocate memory for the new node
+        Node *newNode = new Node();
+
+        // step 2.: Assign valur to the data field of new node
+        newNode->info = x;
+
+        // step 3.: Make the left and right child of the new node point to NULL
+        newNode->leftchild = nullptr;
+        newNode->rightchild = nullptr;
+
+        // step 4.: Locate the node witch will be the parent of the node to be inserted
+        Node *parent = nullptr;
+        Node *currentNode = nullptr;
+        search(x, parent, currentNode);
     }
 };

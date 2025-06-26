@@ -91,4 +91,9 @@ class binaryTree
             return;
         }
     }
+    bool isEmpty()
+    {
+        // checks if the tree is emptyy
+        return ROOT == nullptr;
+    }
 };

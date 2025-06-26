@@ -148,5 +148,5 @@ class binaryTree
 
 int main()
 {
-    
+    binaryTree x;
 }

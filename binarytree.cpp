@@ -7,4 +7,11 @@ class Node
     int info;
     Node *leftchild;
     Node *rightchild;
+
+    // Constructor for thenode class
+    Node()
+    {
+        leftchild = nullptr; // initialize
+        rightchild = nullptr; // initialize
+    }
 };

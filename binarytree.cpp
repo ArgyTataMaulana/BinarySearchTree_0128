@@ -61,5 +61,34 @@ class binaryTree
         Node *parent = nullptr;
         Node *currentNode = nullptr;
         search(x, parent, currentNode);
+
+        // step 5.: if parent is NULL (tree is empty)
+        if (parent == nullptr)
+        {
+            // 5a: mark the new node as the root
+            ROOT = newNode;
+
+            // 5b: exit
+            return;
+        }
+        
+        //step6: if the value in the data field of newnode is less than that of parent
+        if (x < parent->info)
+        {
+            // 6a: make the left child of parent point to newnode
+            parent->leftchild = newNode;
+
+            // 6b: exit
+            return;
+        }
+        // step 7: if the value in the data field of  the new node isgreater than of parent
+        else if(x > parent->info)
+        {
+            // 7a: make the right child of parent point to newnode
+            parent->rightchild = newNode;
+
+            // 7b: exit
+            return;
+        }
     }
 };
